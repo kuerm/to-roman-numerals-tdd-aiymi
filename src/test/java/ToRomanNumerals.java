@@ -18,6 +18,6 @@ class ToRomanNumerals {
         if (input == 1) {
             return "I";
         }
-        return actual;
+        return null;
     }
 }
