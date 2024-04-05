@@ -34,6 +34,8 @@ class ToRomanNumeralsTest {
             "90, XC",
             "91, XCI",
             "95, XCV",
+            "96, XCVI",
+            // "99, XCIX",
             "100, C",
             "400, CD",
             "500, D",
