@@ -6,8 +6,6 @@ import java.util.Map;
 import static org.assertj.core.api.Assertions.assertThat;
 
 class ToRomanNumeralsTest {
-    private static final String ROMAN_NUMBER_TO_1 = "I";
-    private static final String ROMAN_NUMBER_TO_4 = "IV";
     private static final Map<Integer, String> map = new HashMap<>() {{
         put(1, "I");
         put(4, "IV");
@@ -56,10 +54,10 @@ class ToRomanNumeralsTest {
 
     private String toRoman(int input) {
         int four = 4;
+        int one = 1;
         if (input >= four) {
             return map.get(input) + toRoman(input - four);
         }
-        int one = 1;
         if (input >= one) {
             return map.get(one) + toRoman(input - one);
         }
