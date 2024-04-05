@@ -23,6 +23,15 @@ class ToRomanNumeralsTest {
         put(1, "I");
     }};
 
+    private static String toRoman(int input) {
+        for (int possibleKey = input; possibleKey > 0; possibleKey--) {
+            if (map.containsKey(possibleKey)) {
+                return map.get(possibleKey) + toRoman(input - possibleKey);
+            }
+        }
+        return "";
+    }
+
     @ParameterizedTest
     @CsvSource({
             "1, I",
@@ -50,16 +59,5 @@ class ToRomanNumeralsTest {
         String actual = toRoman(input);
 
         assertThat(actual).isEqualTo(expected);
-    }
-
-
-    private String toRoman(int input) {
-
-        for (int possibleKey = input; possibleKey > 0; possibleKey--) {
-            if (map.containsKey(possibleKey)) {
-                return map.get(possibleKey) + toRoman(input - possibleKey);
-            }
-        }
-        return "";
     }
 }
