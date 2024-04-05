@@ -6,6 +6,16 @@ class ToRomanNumeralsTest {
     private static final String ROMAN_NUMBER_TO_1 = "I";
 
     @Test
+    void two() {
+        String expected = "II";
+        int input = 2;
+
+        String actual = toRoman(input);
+
+        assertThat(actual).isEqualTo(expected);
+    }
+
+    @Test
     void one() {
         String expected = "I";
         int input = 1;
@@ -16,7 +26,9 @@ class ToRomanNumeralsTest {
     }
 
     private String toRoman(int input) {
-
+        if (input == 2) {
+            return "II";
+        }
         if (input == 1) {
             return ROMAN_NUMBER_TO_1;
         }
