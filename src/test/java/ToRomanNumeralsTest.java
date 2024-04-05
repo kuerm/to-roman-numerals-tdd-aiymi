@@ -10,6 +10,8 @@ class ToRomanNumeralsTest {
     private static final Map<Integer, String> map = new HashMap<>() {{
         put(1000, "M");
         put(900, "CM");
+        put(500, "D");
+        put(400, "CD");
         put(100, "C");
         put(90, "XC");
         put(50, "L");
@@ -32,6 +34,11 @@ class ToRomanNumeralsTest {
             "90, XC",
             "91, XCI",
             "95, XCV",
+            "100, C",
+            "400, CD",
+            "500, D",
+            "600, DC",
+            "900, CM",
             "3000, MMM"
     })
     void toRoman(int input, String expected) {
