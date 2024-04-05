@@ -27,7 +27,7 @@ class ToRomanNumeralsTest {
 
     private String toRoman(int input) {
         if (input == 2) {
-            return "I" + "I";
+            return ROMAN_NUMBER_TO_1 + ROMAN_NUMBER_TO_1;
         }
         if (input == 1) {
             return ROMAN_NUMBER_TO_1;
