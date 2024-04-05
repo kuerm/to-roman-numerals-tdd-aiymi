@@ -25,7 +25,20 @@ class ToRomanNumeralsTest {
         assertThat(actual).isEqualTo(expected);
     }
 
+    @Test
+    void three() {
+        String expected = "III";
+        int input = 3;
+
+        String actual = toRoman(input);
+
+        assertThat(actual).isEqualTo(expected);
+    }
+
     private String toRoman(int input) {
+        if (input == 3) {
+            return toRoman(1) + toRoman(1) + toRoman(1);
+        }
         if (input == 2) {
             return toRoman(1) + toRoman(1);
         }
