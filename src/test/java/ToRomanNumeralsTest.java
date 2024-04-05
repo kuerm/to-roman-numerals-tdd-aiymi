@@ -1,4 +1,3 @@
-import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 
@@ -16,16 +15,6 @@ class ToRomanNumeralsTest {
         put(1, "I");
     }};
 
-    @Test
-    void six() {
-        String expected = "VI";
-        int input = 6;
-
-        String actual = toRoman(input);
-
-        assertThat(actual).isEqualTo(expected);
-    }
-
     @ParameterizedTest
     @CsvSource({
             "1, I",
@@ -41,55 +30,6 @@ class ToRomanNumeralsTest {
         assertThat(actual).isEqualTo(expected);
     }
 
-    @Test
-    void two() {
-        String expected = "II";
-        int input = 2;
-
-        String actual = toRoman(input);
-
-        assertThat(actual).isEqualTo(expected);
-    }
-
-    @Test
-    void one() {
-        String expected = "I";
-        int input = 1;
-
-        String actual = toRoman(input);
-
-        assertThat(actual).isEqualTo(expected);
-    }
-
-    @Test
-    void three() {
-        String expected = "III";
-        int input = 3;
-
-        String actual = toRoman(input);
-
-        assertThat(actual).isEqualTo(expected);
-    }
-
-    @Test
-    void four() {
-        String expected = "IV";
-        int input = 4;
-
-        String actual = toRoman(input);
-
-        assertThat(actual).isEqualTo(expected);
-    }
-
-    @Test
-    void five() {
-        String expected = "V";
-        int input = 5;
-
-        String actual = toRoman(input);
-
-        assertThat(actual).isEqualTo(expected);
-    }
 
     private String toRoman(int input) {
 
