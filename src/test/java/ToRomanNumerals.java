@@ -5,6 +5,10 @@ import static org.assertj.core.api.Assertions.assertThat;
 class ToRomanNumerals {
     @Test
     void one() {
-        assertThat("I").isEqualTo("I");
+        String expected = "I";
+
+        String actual = "I";
+
+        assertThat(actual).isEqualTo(expected);
     }
 }
