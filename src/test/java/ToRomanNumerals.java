@@ -8,7 +8,8 @@ class ToRomanNumerals {
         String expected = "I";
 
         String actual = "";
-        if (1 == 1) {
+        int input = 1;
+        if (input == 1) {
             actual = "I";
         }
 
