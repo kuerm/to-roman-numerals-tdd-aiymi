@@ -63,15 +63,6 @@ class ToRomanNumeralsTest {
         if (input >= one) {
             return map.get(one) + toRoman(input - one);
         }
-        if (input == 3) {
-            return toRoman(1) + toRoman(1) + toRoman(1);
-        }
-        if (input == 2) {
-            return toRoman(1) + toRoman(1);
-        }
-        if (input == 1) {
-            return map.get(input);
-        }
         return "";
     }
 }
