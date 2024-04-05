@@ -53,7 +53,6 @@ class ToRomanNumeralsTest {
     }
 
     private String toRoman(int input) {
-        int four = 4;
         int one = 1;
 
         int reducableInput = input;
@@ -62,9 +61,6 @@ class ToRomanNumeralsTest {
             if (returnvalue != null) {
                 return returnvalue;
             }
-        }
-        if (input >= four) {
-            return map.get(input) + toRoman(input - four);
         }
         if (input >= one) {
             return map.get(one) + toRoman(input - one);
