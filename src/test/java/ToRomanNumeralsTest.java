@@ -2,7 +2,9 @@ import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-class ToRomanNumerals {
+class ToRomanNumeralsTest {
+    private static final String ROMAN_NUMBER_TO_1 = "I";
+
     @Test
     void one() {
         String expected = "I";
@@ -14,8 +16,9 @@ class ToRomanNumerals {
     }
 
     private String toRoman(int input) {
+
         if (input == 1) {
-            return "I";
+            return ROMAN_NUMBER_TO_1;
         }
         return null;
     }
