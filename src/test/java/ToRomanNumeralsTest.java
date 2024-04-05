@@ -23,7 +23,7 @@ class ToRomanNumeralsTest {
         put(1, "I");
     }};
 
-    private static String toRoman(int input) {
+    public static String toRoman(int input) {
         for (int possibleKey = input; possibleKey > 0; possibleKey--) {
             if (map.containsKey(possibleKey)) {
                 return map.get(possibleKey) + toRoman(input - possibleKey);
