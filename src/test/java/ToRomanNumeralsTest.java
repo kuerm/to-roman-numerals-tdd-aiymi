@@ -1,10 +1,18 @@
 import org.junit.jupiter.api.Test;
 
+import java.util.HashMap;
+import java.util.Map;
+
 import static org.assertj.core.api.Assertions.assertThat;
 
 class ToRomanNumeralsTest {
     private static final String ROMAN_NUMBER_TO_1 = "I";
-    private String ROMAN_NUMBER_TO_4 = "IV";
+    private static final String ROMAN_NUMBER_TO_4 = "IV";
+    private static final Map<Integer, String> map = new HashMap<>() {{
+        put(1, "I");
+        put(4, "IV");
+    }};
+
 
     @Test
     void two() {
