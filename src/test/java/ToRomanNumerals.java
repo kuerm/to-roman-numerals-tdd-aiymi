@@ -9,10 +9,15 @@ class ToRomanNumerals {
 
         String actual = "";
         int input = 1;
-        if (input == 1) {
-            actual = "I";
-        }
+        actual = toRoman(input, actual);
 
         assertThat(actual).isEqualTo(expected);
+    }
+
+    private String toRoman(int input, String actual) {
+        if (input == 1) {
+            return "I";
+        }
+        return actual;
     }
 }
