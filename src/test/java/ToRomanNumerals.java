@@ -6,15 +6,14 @@ class ToRomanNumerals {
     @Test
     void one() {
         String expected = "I";
-
-        String actual = "";
         int input = 1;
-        actual = toRoman(input, actual);
+
+        String actual = toRoman(input);
 
         assertThat(actual).isEqualTo(expected);
     }
 
-    private String toRoman(int input, String actual) {
+    private String toRoman(int input) {
         if (input == 1) {
             return "I";
         }
