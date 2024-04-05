@@ -9,6 +9,9 @@ import static org.assertj.core.api.Assertions.assertThat;
 class ToRomanNumeralsTest {
     private static final Map<Integer, String> map = new HashMap<>() {{
         put(1000, "M");
+        put(900, "CM");
+        put(100, "C");
+        put(90, "XC");
         put(50, "L");
         put(40, "XL");
         put(10, "X");
@@ -26,6 +29,9 @@ class ToRomanNumeralsTest {
             "10, X",
             "42, XLII",
             "50, L",
+            "90, XC",
+            "91, XCI",
+            "95, XCV",
             "3000, MMM"
     })
     void toRoman(int input, String expected) {
