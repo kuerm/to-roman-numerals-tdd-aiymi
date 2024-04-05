@@ -7,8 +7,8 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 class ToRomanNumeralsTest {
     private static final Map<Integer, String> map = new HashMap<>() {{
-        put(1, "I");
         put(4, "IV");
+        put(1, "I");
     }};
 
 
