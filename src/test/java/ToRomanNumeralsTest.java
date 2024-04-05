@@ -55,11 +55,9 @@ class ToRomanNumeralsTest {
     private String toRoman(int input) {
         int one = 1;
 
-        int reducableInput = input;
-        for (int i = 0; i < map.size(); i++) {
-            String returnvalue = map.get(reducableInput);
-            if (returnvalue != null) {
-                return returnvalue;
+        for (int possibleKey = input; possibleKey > 0; possibleKey--) {
+            if (map.containsKey(possibleKey)) {
+                return map.get(possibleKey) + toRoman(input - possibleKey);
             }
         }
         if (input >= one) {
