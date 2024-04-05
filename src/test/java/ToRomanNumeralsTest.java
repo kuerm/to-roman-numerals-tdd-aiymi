@@ -10,6 +10,7 @@ class ToRomanNumeralsTest {
     private static final Map<Integer, String> map = new HashMap<>() {{
         put(1000, "M");
         put(50, "L");
+        put(40, "XL");
         put(10, "X");
         put(5, "V");
         put(4, "IV");
@@ -23,6 +24,7 @@ class ToRomanNumeralsTest {
             "4, IV",
             "5, V",
             "10, X",
+            "42, XLII",
             "50, L",
             "3000, MMM"
     })
