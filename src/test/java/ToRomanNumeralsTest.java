@@ -56,7 +56,7 @@ class ToRomanNumeralsTest {
 
     private String toRoman(int input) {
         if (input == 4) {
-            return ROMAN_NUMBER_TO_4;
+            return map.get(input);
         }
         if (input == 3) {
             return toRoman(1) + toRoman(1) + toRoman(1);
@@ -65,7 +65,7 @@ class ToRomanNumeralsTest {
             return toRoman(1) + toRoman(1);
         }
         if (input == 1) {
-            return ROMAN_NUMBER_TO_1;
+            return map.get(input);
         }
         return null;
     }
