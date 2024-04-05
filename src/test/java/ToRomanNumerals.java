@@ -7,7 +7,10 @@ class ToRomanNumerals {
     void one() {
         String expected = "I";
 
-        String actual = "I";
+        String actual = "";
+        if (1 == 1) {
+            actual = "I";
+        }
 
         assertThat(actual).isEqualTo(expected);
     }
