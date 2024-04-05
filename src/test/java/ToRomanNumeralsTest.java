@@ -12,6 +12,15 @@ class ToRomanNumeralsTest {
         put(1, "I");
     }};
 
+    @Test
+    void six() {
+        String expected = "VI";
+        int input = 6;
+
+        String actual = toRoman(input);
+
+        assertThat(actual).isEqualTo(expected);
+    }
 
     @Test
     void two() {
