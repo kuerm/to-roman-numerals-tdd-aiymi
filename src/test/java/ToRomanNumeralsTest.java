@@ -17,6 +17,7 @@ class ToRomanNumeralsTest {
         put(50, "L");
         put(40, "XL");
         put(10, "X");
+        put(9, "IX");
         put(5, "V");
         put(4, "IV");
         put(1, "I");
@@ -28,6 +29,8 @@ class ToRomanNumeralsTest {
             "2, II",
             "4, IV",
             "5, V",
+            "6, VI",
+            "9, IX",
             "10, X",
             "42, XLII",
             "50, L",
@@ -35,7 +38,7 @@ class ToRomanNumeralsTest {
             "91, XCI",
             "95, XCV",
             "96, XCVI",
-            // "99, XCIX",
+            "99, XCIX",
             "100, C",
             "400, CD",
             "500, D",
