@@ -53,15 +53,11 @@ class ToRomanNumeralsTest {
     }
 
     private String toRoman(int input) {
-        int one = 1;
 
         for (int possibleKey = input; possibleKey > 0; possibleKey--) {
             if (map.containsKey(possibleKey)) {
                 return map.get(possibleKey) + toRoman(input - possibleKey);
             }
-        }
-        if (input >= one) {
-            return map.get(one) + toRoman(input - one);
         }
         return "";
     }
